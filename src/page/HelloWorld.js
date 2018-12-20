@@ -3,6 +3,8 @@ import ShoppingList from './shoppinglist';
 import Square from './square';
 import Clock from './clock'
 import AntCard from './antDesign'
+import InputDemo from './Demo'
+
 const element = <h1>Hello World</h1>;
 
 const Picture = (props) =>{
@@ -26,12 +28,14 @@ class Content extends React.Component {
 			<div className="container">
 				<div style={style}>
                     <ShoppingList/>
+					<InputDemo />
 				</div>
                 <div style={style}>
                     <Picture src={picture.src}>
                         {picture.children}
                     </Picture>
                 </div>
+
 				<Square></Square>
 				<Clock></Clock>
 				<AntCard></AntCard>
