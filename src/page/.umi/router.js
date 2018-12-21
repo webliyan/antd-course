@@ -9,8 +9,45 @@ let Router = DefaultRouter;
 let routes = [
   {
     "path": "/",
-    "component": require('../HelloWorld').default,
-    "exact": true
+    "component": require('../layout').default,
+    "routes": [
+      {
+        "path": "/",
+        "component": require('../HelloWorld').default,
+        "exact": true
+      },
+      {
+        "path": "/helloworld",
+        "component": require('../HelloWorld').default,
+        "exact": true
+      },
+      {
+        "path": "/dashboard",
+        "routes": [
+          {
+            "path": "/dashboard/analysis",
+            "component": require('../Dashboard/Analysis').default,
+            "exact": true
+          },
+          {
+            "path": "/dashboard/monitor",
+            "component": require('../Dashboard/Monitor').default,
+            "exact": true
+          },
+          {
+            "path": "/dashboard/workplace",
+            "component": require('../Dashboard/Workplace').default,
+            "exact": true
+          },
+          {
+            "component": () => React.createElement(require('D:/mypro/reactPro/node_modules/_umi-build-dev@1.2.7@umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/page', hasRoutesInConfig: true })
+          }
+        ]
+      },
+      {
+        "component": () => React.createElement(require('D:/mypro/reactPro/node_modules/_umi-build-dev@1.2.7@umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/page', hasRoutesInConfig: true })
+      }
+    ]
   },
   {
     "component": () => React.createElement(require('D:/mypro/reactPro/node_modules/_umi-build-dev@1.2.7@umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/page', hasRoutesInConfig: true })
