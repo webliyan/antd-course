@@ -4,7 +4,6 @@ import Square from './square';
 import Clock from './clock'
 import AntCard from './antDesign'
 import InputDemo from './Demo'
-const element = <h1>Hello World</h1>;
 
 const Picture = (props) =>{
 	return(

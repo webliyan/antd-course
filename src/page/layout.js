@@ -14,7 +14,7 @@ class BasicLayout extends React.Component {
                     <div style={{ height: '32px', background: 'rgba(255,255,255,.2)', margin: '16px'}}/>
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
                         <Menu.Item key='1'>
-                            <Link to='/helloworld'>
+                            <Link to='/puzzlecards'>
                                 <Icon type='pie-chart' />
                                 <span>HelloAntd</span>
                             </Link>
@@ -27,6 +27,12 @@ class BasicLayout extends React.Component {
                             <Menu.Item key='3'><Link to='/dashboard/monitor'>监控台</Link></Menu.Item>
                             <Menu.Item key='4'><Link to='/dashboard/workplace'>工作台</Link></Menu.Item>
                         </SubMenu>
+                        <Menu.Item key='5'>
+                            <Link to='/list'>
+                                <Icon type='pie-chart' />
+                                <span>Form表单</span>
+                            </Link>
+                        </Menu.Item>
                     </Menu>
                 </Sider>
                 <Layout >

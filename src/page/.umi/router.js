@@ -4,13 +4,18 @@ import dynamic from 'umi/dynamic';
 import renderRoutes from 'umi/_renderRoutes';
 
 
-let Router = DefaultRouter;
+let Router = require('dva/router').routerRedux.ConnectedRouter;
 
 let routes = [
   {
     "path": "/",
     "component": require('../layout').default,
     "routes": [
+      {
+        "path": "/puzzlecards",
+        "component": require('../puzzlecards').default,
+        "exact": true
+      },
       {
         "path": "/",
         "component": require('../HelloWorld').default,
@@ -43,6 +48,11 @@ let routes = [
             "component": () => React.createElement(require('D:/mypro/reactPro/node_modules/_umi-build-dev@1.2.7@umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/page', hasRoutesInConfig: true })
           }
         ]
+      },
+      {
+        "path": "/list",
+        "component": require('../list').default,
+        "exact": true
       },
       {
         "component": () => React.createElement(require('D:/mypro/reactPro/node_modules/_umi-build-dev@1.2.7@umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/page', hasRoutesInConfig: true })
